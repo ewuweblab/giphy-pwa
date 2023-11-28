@@ -9,8 +9,7 @@ const API_KEY = 'vRgpxNRNKxyIlc1sk9lEifd6kDJZDK57';
       .then( gifs => {
       
         // Check Check         
-        console.log(gifs.data);
-        console.log(gifs.data[2].images.downsized);
+        console.log(gifs.data[0].images.downsized);
       
       // Get container for data
       const container = document.querySelector('.container');         
@@ -21,9 +20,9 @@ const API_KEY = 'vRgpxNRNKxyIlc1sk9lEifd6kDJZDK57';
           // template 
           const template  = `
           <div class="carousel-item w-full">
-            <img src=" ${gif.images.downsized.url} " />
-            <p> ${gif.title} </p>
-		    </div>
+            <img class="border-8 border-white" src=" ${gif.images.downsized.url} " />
+            <h2 class="text-5xl text-center text-white"> ${gif.title} </h2>
+		     </div>
           `;
         
           // append
